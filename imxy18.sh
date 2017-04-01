@@ -32,3 +32,5 @@ sudo gpasswd -a mike sudo
 git config --global user.email $1
 git config --global user.name $2
 git config -l
+
+echo export LC_ALL="en_US.UTF-8" >> ~/.bashrc
