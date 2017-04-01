@@ -11,7 +11,7 @@ echo 2=$2
 
 sudo su
     apt-get update && \
-    apt-get -y dist-upgrade
+    apt-get -y dist-upgrade && \
     apt-get install -y gawk wget git-core diffstat unzip texinfo \
         gcc-multilib build-essential chrpath socat libsdl1.2-dev \
         libsdl1.2-dev xterm sed cvs subversion coreutils texi2html \
