@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
     mkdir ~/log && \
-    LOG_FILENAME=~/log/build_imx6y31053110-slevk-cim-fb_`date +%Y%m%d%H%M%S`.txt && \
+    BUILD_NAME=`basename $0 .sh` && \
+    LOG_FILENAME=~/log/build_${BUILD_NAME}_`date +%Y%m%d%H%M%S`.txt && \
     date +%Y%m%d%H%M%S >> ${LOG_FILENAME} && \
     df                 >> ${LOG_FILENAME} && \
     free               >> ${LOG_FILENAME} && \
@@ -56,4 +57,5 @@
     free               >> ${LOG_FILENAME} && \
     \
     date +%Y%m%d%H%M%S && df && free && \
-    echo "!!!!!! %0 done."
+    ls -la ~/yocto/imx6*/tmp/deploy/images/imx6* && \
+    echo "!!!!!! ${BUILD_NAME} done."
