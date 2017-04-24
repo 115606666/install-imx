@@ -1,13 +1,13 @@
 #!/bin/bash
 
-    mkdir ~/log && \
+    mkdir -p ~/log && \
     BUILD_NAME=`basename $0 .sh` && \
     LOG_FILENAME=~/log/build_${BUILD_NAME}_`date +%Y%m%d%H%M%S`.txt && \
     date +%Y%m%d%H%M%S | tee -a ${LOG_FILENAME} && \
     df                 | tee -a ${LOG_FILENAME} && \
     free               | tee -a ${LOG_FILENAME} && \
     \
-    MACHINE_NAME=ilmx6qsabresd && \
+    MACHINE_NAME=imx6qsabresd && \
     DISTRO_NAME=fsl-imx-fb && \
     IMAGE_NAME=fsl-image-qt5 && \
     BUILD_PATH=${MACHINE_NAME} && \
