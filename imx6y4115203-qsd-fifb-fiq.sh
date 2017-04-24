@@ -24,8 +24,6 @@
     \
     cd ~/yocto && \
     \
-    sed -i 's,f45db89ddc91692b662fffbabbdafc7bc4c00f5e,789cfc7d727cee1c7cfb7d29c09162e2399285c5,' sources/poky/meta/recipes-devtools/file/file_5.25.bb && \
-    \
     DISTRO=${DISTRO_NAME} MACHINE=${MACHINE_NAME} EULA=1 source ./fsl-setup-release.sh -b ${BUILD_PATH} && \
     \
     START_DATETIME=`date +%Y%m%d%H%M%S` && START_TIME=$(date +%s) && \
