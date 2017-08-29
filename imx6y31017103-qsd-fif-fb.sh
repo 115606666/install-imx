@@ -8,7 +8,7 @@
     free               >> ${LOG_FILENAME} && \
     \
     MACHINE_NAME=imx6qsabresd && \
-    IMAGE_NAME=fsl-image-gui && \
+    IMAGE_NAME=fsl-image-fb && \
     BACKEND=fb && \
     BUILD_PATH=${MACHINE_NAME} && \
     \
