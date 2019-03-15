@@ -11,13 +11,13 @@ echo 2=$2
 
 sudo apt-get update && \
 sudo apt-get -y dist-upgrade && \
-sudo apt-get install -y gawk wget git-core diffstat unzip texinfo \
+sudo apt-get -y install gawk wget git-core diffstat unzip texinfo \
         gcc-multilib build-essential chrpath socat libsdl1.2-dev \
         libsdl1.2-dev xterm sed cvs subversion coreutils texi2html \
         docbook-utils python-pysqlite2 help2man make gcc g++ \
         desktop-file-utils libgl1-mesa-dev libglu1-mesa-dev \
         mercurial autoconf automake groff curl lzop asciidoc \
-        u-boot-tools \
+        u-boot-tools libncurses5-dev lib32ncursesw5-dev \
         bc pv vim openssh-server tmux && \
 sudo cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
 echo 'LANG="en_US.UTF-8"' | sudo dd of=/etc/default/locale && \
