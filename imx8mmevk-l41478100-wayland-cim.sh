@@ -79,4 +79,9 @@ print_diff_time()
     ls -la tmp/deploy/sdk | tee -a $LOG_FILENAME
     print_df_free
 
+    # Print summary
+    print_sep_line
+    echo TIME1=$TIME1 | tee -a $LOG_FILENAME
+    echo TIME2=$TIME2 | tee -a $LOG_FILENAME
+
     echo "!!!!!! ${BUILD_NAME} done."
