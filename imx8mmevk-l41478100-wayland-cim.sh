@@ -51,10 +51,10 @@ print_diff_time()
     echo IMAGE_NAME=${IMAGE_NAME}     | tee -a ${LOG_FILENAME}
     echo BUILD_PATH=${BUILD_PATH}     | tee -a ${LOG_FILENAME}
 
-    echo export MACHINE_NAME=${MACHINE_NAME} >> ~/.bashrc
-    echo export DISTRO_NAME=${DISTRO_NAME}   >> ~/.bashrc
-    echo export IMAGE_NAME=${IMAGE_NAME}     >> ~/.bashrc
-    echo export BUILD_PATH=${BUILD_PATH}     >> ~/.bashrc
+    echo export MACHINE_NAME=${MACHINE_NAME} | tee -a ~/.bashrc
+    echo export DISTRO_NAME=${DISTRO_NAME}   | tee -a ~/.bashrc
+    echo export IMAGE_NAME=${IMAGE_NAME}     | tee -a ~/.bashrc
+    echo export BUILD_PATH=${BUILD_PATH}     | tee -a ~/.bashrc
 
     cd ~/yocto
 
