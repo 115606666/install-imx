@@ -7,7 +7,7 @@
     df                 | tee -a ${LOG_FILENAME} && \
     free               | tee -a ${LOG_FILENAME} && \
     \
-    MACHINE_NAME=imx6slevk && \
+    MACHINE_NAME=imx8mmevk && \
     DISTRO_NAME=fsl-imx-fb && \
     IMAGE_NAME=core-image-minimal && \
     BUILD_PATH=build && \
