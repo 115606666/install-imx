@@ -43,7 +43,7 @@ print_diff_time()
 
     MACHINE_NAME=imx8mmevk
     DISTRO_NAME=fsl-imx-xwayland
-    IMAGE_NAME=fsl-image-validation
+    IMAGE_NAME=fsl-image-validation-imx
     BUILD_PATH=build
 
     echo MACHINE_NAME=${MACHINE_NAME} | tee -a ${LOG_FILENAME}
