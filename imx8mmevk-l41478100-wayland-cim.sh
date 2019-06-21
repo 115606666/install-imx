@@ -1,5 +1,6 @@
 #!/bin/bash
 
+SEP_LINE=------------------------------------------------------------------
 LOG_FILENAME=
 START_TIME=
 DIFF_TIME=
