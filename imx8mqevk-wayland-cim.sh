@@ -37,17 +37,13 @@ print_diff_time()
     echo DIFF_TIME=$DIFF_TIME
 }
 
-echo "Below erro when run with l41478100.sh"
-echo "ERROR - Only Wayland distros are supported for i.MX 8 or i.MX 8M"
-exit
-
     mkdir -p ~/log
     BUILD_NAME=`basename $0 .sh`
     LOG_FILENAME=~/log/build_${BUILD_NAME}_`date +%Y%m%d%H%M%S`.txt
     print_df_free
 
     MACHINE_NAME=imx8mqevk
-    DISTRO_NAME=fsl-imx-fb
+    DISTRO_NAME=fsl-imx-wayland
     IMAGE_NAME=core-image-minimal
     BUILD_PATH=build
 
