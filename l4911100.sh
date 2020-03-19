@@ -2,6 +2,6 @@
 
 mkdir yocto && cd yocto && \
 repo init \
-    -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git \
+    -u https://source.codeaurora.org/external/imx/fsl-arm-yocto-bsp \
     -b imx-morty && \
 repo sync -c -j8
