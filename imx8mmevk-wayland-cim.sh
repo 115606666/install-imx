@@ -43,7 +43,7 @@ print_diff_time()
     print_df_free
 
     MACHINE_NAME=imx8mmevk
-    DISTRO_NAME=fsl-imx-fb
+    DISTRO_NAME=fsl-imx-wayland
     IMAGE_NAME=core-image-minimal
     BUILD_PATH=build
 
@@ -63,7 +63,8 @@ print_diff_time()
     print_sep_line
     print_df_free
     get_start_time
-    DISTRO=${DISTRO_NAME} MACHINE=${MACHINE_NAME} EULA=1 source ./fsl-setup-release.sh -b ${BUILD_PATH}
+    [ -f ./fsl-setup-release.sh ] && DISTRO=${DISTRO_NAME} MACHINE=${MACHINE_NAME} EULA=1 source ./fsl-setup-release.sh -b ${BUILD_PATH}
+    [ -f ./imx-setup-release.sh ] && DISTRO=${DISTRO_NAME} MACHINE=${MACHINE_NAME} EULA=1 source ./imx-setup-release.sh -b ${BUILD_PATH}
     time bitbake ${IMAGE_NAME} 2>&1 | tee -a ${LOG_FILENAME}
     print_diff_time
     TIME1=$DIFF_TIME
