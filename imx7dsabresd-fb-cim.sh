@@ -65,6 +65,9 @@ print_diff_time()
     get_start_time
     [ -f ./fsl-setup-release.sh ] && DISTRO=${DISTRO_NAME} MACHINE=${MACHINE_NAME} EULA=1 source ./fsl-setup-release.sh -b ${BUILD_PATH}
     [ -f ./imx-setup-release.sh ] && DISTRO=${DISTRO_NAME} MACHINE=${MACHINE_NAME} EULA=1 source ./imx-setup-release.sh -b ${BUILD_PATH}
+    grep PACKAGE_CLASSES conf/local.conf
+    sed -i 's,^PACKAGE_CLASSES\ =\ \"package_deb\",#PACKAGE_CLASSES\ =\ \"package_deb\",' conf/local.conf
+    grep PACKAGE_CLASSES conf/local.conf
     time bitbake ${IMAGE_NAME} 2>&1 | tee -a ${LOG_FILENAME}
     print_diff_time
     TIME1=$DIFF_TIME
