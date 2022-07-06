@@ -19,7 +19,7 @@ sudo apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
         python python3 python3-pip python3-pexpect \
         xz-utils debianutils iputils-ping python3-git \
         python3-jinja2 libegl1-mesa libsdl1.2-dev \
-        pylint3 xterm rsync curl zstd pzstd lz4c lz4 \
+        pylint3 xterm rsync curl zstd lz4 \
         libncurses5-dev bc pv vim openssh-server tmux && \
 sudo cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
 echo 'LANG="en_US.UTF-8"' | sudo dd of=/etc/default/locale && \
