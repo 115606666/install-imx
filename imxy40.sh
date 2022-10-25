@@ -11,7 +11,7 @@ echo 0=$0
 echo 1=$1
 echo 2=$2
 
-# i.MX Yocto Project User's Guide, Rev. L4.19.35_1.1.0, 11/2019
+# i.MX Yocto Project User's Guide, Rev. LF5.15.52_2.1.0 — 30 September 2022
 sudo apt-get update && \
 sudo apt-get -y dist-upgrade && \
 sudo apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
@@ -19,7 +19,7 @@ sudo apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
         python python3 python3-pip python3-pexpect \
         xz-utils debianutils iputils-ping python3-git \
         python3-jinja2 libegl1-mesa libsdl1.2-dev \
-        pylint3 xterm rsync curl zstd lz4 \
+        pylint3 xterm rsync curl zstd pzstd lz4 \
         libncurses5-dev bc pv vim openssh-server tmux && \
 sudo cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
 echo 'LANG="en_US.UTF-8"' | sudo dd of=/etc/default/locale && \
