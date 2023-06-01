@@ -16,10 +16,10 @@ sudo apt-get update && \
 sudo apt-get -y dist-upgrade && \
 sudo apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
         build-essential chrpath socat cpio \
-        pylint3 xterm rsync curl zstd pzstd xz-utils \
+        pylint3 xterm rsync curl zstd xz-utils \
         python python3 python3-pip python3-pexpect python3-git python3-jinja2 \
         libegl1-mesa libsdl1.2-dev debianutils iputils-ping \
-        lz4c lz4 libssl-dev \
+        lz4 libssl-dev \
         libncurses5-dev bc pv vim openssh-server tmux && \
 sudo cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
 echo 'LANG="en_US.UTF-8"' | sudo dd of=/etc/default/locale && \
